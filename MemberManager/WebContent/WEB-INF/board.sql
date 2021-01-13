@@ -77,6 +77,26 @@ from board b, (select bno, count(*) as comment_count from board_comment group by
 where b.bno = c.bno(+) order by b.bno desc)) where pagenum = 2;
 
 
-s
+--문의하기 테이블
+drop table qna;
 
+create table qna(
+	qno number primary key,
+	title varchar2(100 byte),
+	content varchar2(4000 byte),
+	wdate date default sysdate,
+	writer varchar2(25 byte),
+	status number default 0,--안 읽음 0, 읽음 1 답변 완료 2
+	response varchar2(4000 byte)
+);
+
+create sequence qno_seq start with 1 NOMAXVALUE;
+
+select * from qna
+
+
+select * from qna where writer 'A0001' order by qno desc;
+
+select * from (select ceil(rownum/5) as page, qno, title, content, wdate, writer, status, response
+from (select * from qna where writer = 'A0001' order by qno desc)) where page =1;
 

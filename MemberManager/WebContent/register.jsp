@@ -22,7 +22,7 @@
 	<jsp:include page="template/header.jsp"></jsp:include>
 	<!-- 아이디 암호 이름 나이 입력 받는 회원가입 폼 -->
 	<div id="container">
-		<form action="register_process.jsp" method="post">
+		<form action="register.do" method="post">
 			<label>아이디 <input type="text" name="id"></label><br> 
 			<label>암호<input type="password" name="pass"></label><br>
 			<label>이름 <input type="text" name="name"></label><br> 

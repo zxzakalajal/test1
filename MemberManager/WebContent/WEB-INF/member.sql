@@ -36,7 +36,7 @@ select id, name, pass, age, grade_name from MEMBER, grade_list where grade_no = 
 
 
 
-
+K6985
 
 
 

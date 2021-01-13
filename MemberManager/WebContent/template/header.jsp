@@ -52,8 +52,8 @@
 				<%	
 			}
 		%>
-		<li><a href="member_update_view.jsp">회원정보수정</a></li>
-		<li><a href="#">문의하기</a></li>
+		<li><a href="updateView.do">회원정보수정</a></li>
+		<li><a href="qnaView.do">문의하기</a></li>
 	</ul>
 	<div id="login">
 		<table>
